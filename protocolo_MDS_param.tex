@@ -1,0 +1,43 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\date{18 de agosto 2014}
+\title{Protocolo para la aplicación de un modelo paramétrico en MDS} 
+\author{Guillermo Federico OLMEDO}
+\usepackage{natbib}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[hidelinks]{hyperref}
+\lstset{language=R, numbers=left, frame=single}
+% %\usepackage[spanish]{babel}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\begin{document}
+\maketitle
+\section{Introducción}
+El script completo esta disponible en
+\url{https://github.com/midraed/Digital-Soil-Mapping/blob/master/Protparam.R}
+asd
+
+asd
+\begin{lstlisting}
+setwd("~/Proyectos/MDS/Santa Ines/2014/R/")
+library(gstat)
+library(raster)
+library(sp)
+library(soiltexture)
+startdir <- getwd()
+setwd(paste(getwd(), "/covar_ss", sep=""))
+files <- list.files(pattern="sdat")
+stack1 <- list()
+for(i in 1:length(files)) {
+  stack1[[i]] <- raster(files[i])}
+covariables <- do.call(stack, stack1) ### JO!
+setwd(startdir)
+covariables
+plot(covariables)
+plot(covariables[[17:19]])
+\end{lstlisting}
+Y sigue el texto normal..\citep*{webster_geostatistics_2007}
+% % Y ahora la bibliografia
+\bibliographystyle{plainnat}  
+\bibliography{protocolo}
+\end{document}
