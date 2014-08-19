@@ -3,7 +3,6 @@
 \date{18 de agosto 2014}
 \title{Protocolo para la aplicación de un modelo paramétrico en MDS} 
 \author{Guillermo Federico OLMEDO}
-\usepackage{natbib}
 \usepackage{listings}
 \usepackage{color}
 \usepackage[hidelinks]{hyperref}
@@ -12,33 +11,26 @@
   xleftmargin=\parindent, extendedchars=true, rulecolor=\color{white}}
 %\lstset{language=R, belowcaptionskip=1\baselineskip,  frame=L,  xleftmargin=\parindent, basicstyle=\footnotesize\ttfamily}
 \usepackage[spanish]{babel}
- \usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{,}{,}
 \begin{document}
 \maketitle
 \section{Introducción}
-El script completo esta disponible en el repositorio del protocolo: 
-\url{https://github.com/midraed/DSM-ProtocoloRK}, así como el archivo fuente en \LaTeX\space de este documento.
+El objetivo de este protocolo es sugerir una serie de pasos para aplicar metodolo- gías de Mapeo Digital de Suelos\footnote{Digital Soil Mapping, en inglés.} a datos puntuales de suelos. En este primer protocolo se trabajará sobre la aplicación de un modelo paramétrico a variables continuas, conocido como \textit{regression-kriging}, o \textit{kriging with external trend} \citep{hengl_practical_2009}. En futuras ediciones se trabajarán sobre modelos no paramétricos y/o variables categóricas. 
+
+Este protocolo incluye el código necesario para ejecutar los pasos sugeridos en lenguaje R \citep{R}; además, con el objeto de facilitar la aplicación de este protocolo, todo el código utilizado se encuentra disponible en el archivo \textit{script.R} en el repositorio del protocolo: 
+\url{https://github.com/midraed/DSM-ProtocoloRK}, así como el archivo fuente en \LaTeX\space de este documento. En el mismo repositorio podrá encontrarse un conjunto de datos de prueba.
+
+El código en este documento aparece en recuadros grises, y durante el texto se hará referencia a determinadas líneas a partir de la numeración de las mismas.
 \begin{lstlisting}
-setwd("~/Proyectos/MDS/Santa Ines/2014/R/")
+setwd("directorio-de-trabajo")
 library(gstat)
 library(raster)
 library(sp)
-library(soiltexture)
-startdir <- getwd()
-setwd(paste(getwd(), "/covar_ss", sep=""))
-files <- list.files(pattern="sdat")
-stack1 <- list()
-for(i in 1:length(files)) {
-  stack1[[i]] <- raster(files[i])}
-covariables <- do.call(stack, stack1) ### JO!
-setwd(startdir)
-covariables
-plot(covariables)
-plot(covariables[[17:19]])
-
-
 \end{lstlisting}
+\section{Material y Metodos}
+En este trabajo bla bla.. \citep*{graziotin_web-based_2013}
 Y sigue el texto normal..\citep*{webster_geostatistics_2007} Análisis
 % % Y ahora la bibliografia
 \section{Protocolo para modelos paramétricos}

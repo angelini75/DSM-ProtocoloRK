@@ -1,9 +1,34 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Graziotin and Abrahamsson(2013)]{graziotin_web-based_2013}
+Daniel Graziotin and Pekka Abrahamsson.
+\newblock A web-based modeling tool for the {SEMAT} essence theory of software
+  engineering.
+\newblock \emph{Journal of Open Research Software}, 1\penalty0 (1), September
+  2013.
+\newblock ISSN 2049-9647.
+\newblock \doi{10.5334/jors.ad}.
+\newblock URL
+  \url{http://academia.stackexchange.com/questions/14010/how-do-you-cite-a-github-repository}.
+\newblock 00002.
+
+\bibitem[Hengl(2009)]{hengl_practical_2009}
+Tomislav Hengl.
+\newblock \emph{A practical guide to geostatistical mapping}.
+\newblock Hengl], Amsterdam, 2009.
+\newblock ISBN 9789090249810 9090249818.
+\newblock 00006.
+
+\bibitem[{R Core Team}(2014)]{R}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2014.
+\newblock URL \url{http://www.R-project.org/}.
 
 \bibitem[Webster and Oliver(2007)]{webster_geostatistics_2007}
 Richard Webster and Margaret~A Oliver.
